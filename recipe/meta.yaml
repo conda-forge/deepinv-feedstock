@@ -1,5 +1,5 @@
 {% set name = "deepinv" %}
-{% set version = "0.2.0" %}
+{% set version = "0.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/deepinv-{{ version }}.tar.gz
-  sha256: 0187190c28cfa74d6bd87a1793a19005faad09da7e14897f5b8f506d5845219e
+  sha256: 87c6dfb737a2fb0834f395521287f0095ee7fbede906cae258ca691a84bcad3d
 
 build:
   noarch: python
