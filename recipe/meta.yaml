@@ -27,8 +27,10 @@ requirements:
     - tqdm
     - pytorch
     - torchvision
+    - torchmetrics
     - einops
     - wandb
+    - scipy
 
 test:
   imports:
