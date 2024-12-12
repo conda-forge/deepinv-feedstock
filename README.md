@@ -149,6 +149,3 @@ Feedstock Maintainers
 * [@matthieutrs](https://github.com/matthieutrs/)
 * [@tachella](https://github.com/tachella/)
 
-
-<!-- dummy commit to enable rerendering -->
-
