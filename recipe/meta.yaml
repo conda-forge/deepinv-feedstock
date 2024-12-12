@@ -44,6 +44,7 @@ test:
     - python {{ python_min }}
     - pip
     - pytest
+    - datasets
 
 about:
   summary: Pytorch library for solving inverse problems with deep learning
