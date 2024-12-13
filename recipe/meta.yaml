@@ -40,6 +40,7 @@ test:
     - pytest deepinv/tests -vs
   source_files:
     - deepinv/tests/*
+    - deepinv/tests/assets/generators/*
   requires:
     - python {{ python_min }}
     - pip
