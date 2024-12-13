@@ -1,13 +1,13 @@
 {% set name = "deepinv" %}
-{% set version = "0.2.0" %}
+{% set version = "0.2.2" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/deepinv-{{ version }}.tar.gz
-  sha256: 0187190c28cfa74d6bd87a1793a19005faad09da7e14897f5b8f506d5845219e
+  url: https://github.com/deepinv/deepinv/archive/refs/tags/v.{{ version }}.tar.gz
+  sha256: 3e040ff13ba5f6967454a4c53ad495839c1eb48bf743f700b64b72f5cc199e72
 
 build:
   noarch: python
@@ -16,19 +16,21 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - setuptools >=61.2
     - pip
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - numpy
     - matplotlib-base
     - hdf5storage
     - tqdm
     - pytorch
     - torchvision
+    - torchmetrics
     - einops
     - wandb
+    - scipy
 
 test:
   imports:
@@ -38,9 +40,13 @@ test:
     - pytest deepinv/tests -vs
   source_files:
     - deepinv/tests/*
+    - deepinv/tests/assets/generators/*
   requires:
+    - python {{ python_min }}
     - pip
     - pytest
+    - datasets
+    - ipython
 
 about:
   summary: Pytorch library for solving inverse problems with deep learning
