@@ -46,6 +46,7 @@ test:
     - pip
     - pytest
     - datasets
+    - ipython
 
 about:
   summary: Pytorch library for solving inverse problems with deep learning
