@@ -48,6 +48,13 @@ test:
     - pytest
     - datasets
     - ipython
+    - bm3d
+    - timm
+    - pywavelets
+    - kornia
+    - torchkbnufft
+    - libcpab
+    - sigpy
 
 about:
   summary: Pytorch library for solving inverse problems with deep learning
