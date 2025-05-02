@@ -53,6 +53,7 @@ test:
     - kornia
     - torchkbnufft
     - sigpy
+    - mat73
 
 about:
   summary: Pytorch library for solving inverse problems with deep learning
