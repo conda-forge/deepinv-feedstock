@@ -48,12 +48,10 @@ test:
     - pytest
     - datasets
     - ipython
-    - bm3d
     - timm
     - pywavelets
     - kornia
     - torchkbnufft
-    - libcpab
     - sigpy
 
 about:
