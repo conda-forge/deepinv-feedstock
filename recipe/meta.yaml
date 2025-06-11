@@ -38,7 +38,7 @@ test:
     - deepinv
   commands:
     - pip check
-    - pytest deepinv/tests -v --disable-progress-bar -k "not test_ncsnpp_net"
+    - pytest deepinv/tests -v -k "not test_ncsnpp_net"
   source_files:
     - deepinv/tests/*
     - deepinv/tests/assets/generators/*
@@ -46,7 +46,6 @@ test:
     - python {{ python_min }}
     - pip
     - pytest
-    - pytest-tqdm
     - datasets
     - ipython
     - timm
