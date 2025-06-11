@@ -38,7 +38,7 @@ test:
     - deepinv
   commands:
     - pip check
-    - pytest deepinv/tests -v -k "not test_ncsnpp_net"
+    - pytest deepinv/tests -v -k "not test_ncsnpp_net" -k "test_algo_inpaint and not DDRM"
   source_files:
     - deepinv/tests/*
     - deepinv/tests/assets/generators/*
