@@ -38,7 +38,7 @@ test:
     - deepinv
   commands:
     - pip check
-    - pytest deepinv/tests -vs -k "not test_ncsnpp_net"
+    - TQDM_DISABLE=1 pytest deepinv/tests -vs -k "not test_ncsnpp_net"
   source_files:
     - deepinv/tests/*
     - deepinv/tests/assets/generators/*
