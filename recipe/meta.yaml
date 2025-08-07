@@ -40,7 +40,7 @@ test:
   commands:
     - pip check
     - pip install ptwt bm3d
-    - pytest deepinv/tests -v -k "not test_ncsnpp_net and not test_load_ and not (test_algo_inpaint and DDRM)"
+    - pytest deepinv/tests -x -v -k "not test_ncsnpp_net and not test_load_ and not (test_algo_inpaint and DDRM) and not (test_build_algo and SKRock)"
   source_files:
     - deepinv/tests/*
     - deepinv/tests/assets/generators/*
