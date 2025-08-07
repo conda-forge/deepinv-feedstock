@@ -26,7 +26,7 @@ requirements:
     - matplotlib-base
     - hdf5storage
     - tqdm
-    - pytorch <2.7
+    - pytorch >=2.2.0
     - torchvision
     - torchmetrics
     - einops
