@@ -25,7 +25,7 @@ requirements:
     - matplotlib-base
     - hdf5storage
     - tqdm
-    - pytorch <2.7
+    - pytorch >=2.2.0
     - torchvision
     - torchmetrics
     - einops
@@ -41,7 +41,6 @@ test:
     - pytest deepinv/tests -v -k "not test_ncsnpp_net" -k "test_algo_inpaint and not DDRM"
   source_files:
     - deepinv/tests/*
-    - deepinv/tests/assets/generators/*
   requires:
     - python {{ python_min }}
     - pip
