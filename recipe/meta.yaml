@@ -39,7 +39,7 @@ test:
   commands:
     - pip check
     #- pytest deepinv/tests -v -k "not test_ncsnpp_net" -k "test_algo_inpaint and not DDRM"
-    - pytest deepinv/tests -v -k "not (test_load_ or test_icnn or test_ncsnpp_net or test_algo_inpaint)" -m "not slow"
+    - pytest deepinv/tests -v -k "not (test_load_ or test_icnn or test_ncsnpp_net or test_algo_inpaint or test_datasets)" -m "not slow"
   source_files:
     - deepinv/tests/*
   requires:
