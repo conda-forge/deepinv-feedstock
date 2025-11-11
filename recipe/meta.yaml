@@ -1,5 +1,5 @@
 {% set name = "deepinv" %}
-{% set version = "0.3.2" %}
+{% set version = "0.3.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/deepinv/deepinv/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: ba572b4a1a49b4b46b0f11b82201ba8c8391d0fbef24355649acc0b363dba939
+  sha256: a63978ca9111c2db54df0d2537bbf1341cc7420b21934a2237162cb094b867a1
 
 build:
   noarch: python
@@ -25,7 +25,7 @@ requirements:
     - matplotlib-base
     - hdf5storage
     - tqdm
-    - pytorch <2.7
+    - pytorch >=2.2.0
     - torchvision
     - torchmetrics
     - einops
@@ -38,10 +38,10 @@ test:
     - deepinv
   commands:
     - pip check
-    - pytest deepinv/tests -v -k "not test_ncsnpp_net" -k "test_algo_inpaint and not DDRM"
+    #- pytest deepinv/tests -v -k "not test_ncsnpp_net" -k "test_algo_inpaint and not DDRM"
+    - pytest deepinv/tests -v -k "not (test_load_ or test_icnn or test_ncsnpp_net or test_algo_inpaint or test_datasets or test_denoiser_perf)" -m "not slow"
   source_files:
     - deepinv/tests/*
-    - deepinv/tests/assets/generators/*
   requires:
     - python {{ python_min }}
     - pip
