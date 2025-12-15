@@ -1,5 +1,5 @@
 {% set name = "deepinv" %}
-{% set version = "0.3.6" %}
+{% set version = "0.3.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/deepinv/deepinv/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: a63978ca9111c2db54df0d2537bbf1341cc7420b21934a2237162cb094b867a1
+  sha256: 8a73108751902870b9e3e13ffd898d87bbaac0c3acef18510e92e15417df4e32
 
 build:
   noarch: python
