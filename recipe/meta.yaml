@@ -1,13 +1,13 @@
 {% set name = "deepinv" %}
-{% set version = "0.4.7" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/deepinv/deepinv/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 8be83b112319d3437d657aa5622809bd1982f6e2479fe61c24507dd13713b4ba
+  url: https://github.com/deepinv/deepinv/archive/v{{ version }}.tar.gz
+  sha256: 4b5efdd2a221684bba9bd153a8cfef3bc31001901a4eee71bdbdc3befdca191b
 
 build:
   noarch: python
@@ -23,7 +23,7 @@ requirements:
     - python >={{ python_min }}
     - numpy
     - matplotlib-base
-    - hdf5storage
+    - h5py
     - tqdm
     - pytorch >=2.2.0
     - torchvision
