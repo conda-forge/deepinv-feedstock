@@ -29,8 +29,8 @@ requirements:
     - torchvision
     - torchmetrics
     - einops
-    - scipy
     - natsort
+    - requests
 
 test:
   imports:
